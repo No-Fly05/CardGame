@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://sx6wu3cy2afy"]
+
+[ext_resource type="Script" path="res://src/scripts/card.gd" id="1_oajwa"]
+
+[node name="Card" type="Node2D" groups=["cards"]]
+script = ExtResource("1_oajwa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="MouseRegion" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+
+[connection signal="pressed" from="MouseRegion" to="." method="_on_mouse_region_pressed"]
